@@ -5,8 +5,7 @@ ZSH=/usr/share/oh-my-zsh/
 source /usr/share/zsh-theme-powerlevel10k/powerlevel10k.zsh-theme
 
 # List of plugins used
-plugins=( git sudo zsh-256color zsh-autosuggestions zsh-syntax-highlighting )
-fpath+=${ZSH_CUSTOM:-${ZSH:-/usr/share/oh-my-zsh}/custom}/plugins/zsh-completions/src
+plugins=( )
 source $ZSH/oh-my-zsh.sh
 
 # In case a command is not found, try to find the package that has it
@@ -72,7 +71,7 @@ alias pa='$aurhelper -Ss' # list availabe package
 alias pc='$aurhelper -Sc' # remove unused cache
 alias po='$aurhelper -Qtdq | $aurhelper -Rns -' # remove unused packages, also try > $aurhelper -Qqd | $aurhelper -Rsu --print -
 alias vc='code' # gui code editor
-alias dodo='paru && paru -Scc && sync && sudo shutdown now'
+alias dodo='paru && paru -Scc && sudo shutdown now'
 
 # Handy change dir shortcuts
 alias ..='cd ..'
@@ -89,7 +88,4 @@ alias mkdir='mkdir -p'
 
 #Display Pokemon
 #pokemon-colorscripts --no-title -r 1,3,6
-
-# Added by ProtonUp-Qt on 12-06-2024 21:47:07
-if [ -d "/home/vylkatis/stl/prefix" ]; then export PATH="$PATH:/home/vylkatis/stl/prefix"; fi
 
